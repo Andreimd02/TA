@@ -13,6 +13,7 @@
 			<ul>
 				<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
 				<li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
+				<li><g:link class="SearchpropertybyDate" action="SearchpropertybyDate"><g:message args="[entityName]" />Search property by Date</g:link></li>
 			</ul>
 		</div>
 		<div id="list-evaluation" class="content scaffold-list" role="main">
@@ -23,7 +24,7 @@
 			<table>
 			<thead>
 					<tr>
-
+					
 						<g:sortableColumn property="origin" title="${message(code: 'evaluation.origin.label', default: 'Origin')}" />
 					
 						<g:sortableColumn property="value" title="${message(code: 'evaluation.value.label', default: 'Value')}" />
@@ -42,7 +43,7 @@
 					
 						<td>${fieldValue(bean: evaluationInstance, field: "value")}</td>
 					
-						<td>${fieldValue(bean: evaluationInstance, field: "criterion.description")}</td>
+						<td>${fieldValue(bean: evaluationInstance, field: "criterion")}</td>
 					
 						<td><g:formatDate date="${evaluationInstance.applicationDate}" /></td>
 					
